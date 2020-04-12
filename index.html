@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MOVIES.GE</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="staili.css">
+ <link rel="stylesheet" href="media.css">
+ <link rel="stylesheet" href="slider.css">
+ <link rel="icon" href="images/filmsicon.jpg">
+ <script src="script.js"></script>
+</head>
+<body>
+  <div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-circle-up"></i></button>
+  <!-- ნავიგაციის დასაწყისი -->
+  <nav id="navi" class="navbar navbar-expand-lg navbar-submit bg-submit">
+  <a class="navbar-brand" href="#"><i class="fas fa-film" ></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a id="texti" class="nav-link" href="#">ახალი <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a id="texti" class="nav-link" href="#">პოპულარული</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="texti" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ფილმები
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a id="con"  class="dropdown-item" href="#">ახალი</a>
+          <a id="con" class="dropdown-item" href="#">ქართულად ჩახმოვანებული</a>
+          <a id="con"  class="dropdown-item" href="#">მხატვრული</a>
+          <a id="con"  class="dropdown-item" href="#">ფანტასტიკა</a>
+          <a id="con"  class="dropdown-item" href="#">დოკუმენტური</a>
+          <a id="con"  class="dropdown-item" href="#">კოლექციები</a>
+          <a id="con"  class="dropdown-item" href="#">თრეილერები</a>
+        </div>
+      <li class="nav-item">
+        <a id="texti" class="nav-link" href="#">სერიალები</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="texti" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          მულტფილმები
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a id="con" class="dropdown-item" href="#">ანიმე</a>
+          <a id="con" class="dropdown-item" href="#">3D ანიმაცია</a>
+          <a id="con" class="dropdown-item" href="#">ზღაპრული</a>
+          <a id="con" class="dropdown-item" href="#">თრეილერები</a>
+          <a id="con" class="dropdown-item" href="#">კოლექციები</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a id="texti" class="nav-link" href="#">IMDB რეიტინგი</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  შესვლა
+</button>
+    </form>
+  </div>
+</nav>
+<!-- Modal -->
+<div  class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div id="backgr" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">შეიყვანეთ პირადი მონაცემები</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="shesvla" class="modal-body">
+        <form>
+  <div class="register">
+    <label for="logini"><b>ლოგინი</b></label><br>
+    <input class="inputcred" type="text" placeholder="შეიყვანეთ მაილი" name="uname" required><br><br>
+    <label for="paroli"><b>პაროლი</b></label><br>
+    <input class="inputcred" type="text" placeholder="შეიყვანეთ პაროლი" name="psw" required>
+  </div>
+</form>
+<!-- /////////// -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">დახურვა</button>
+        <button type="button" class="btn btn-primary">შესვლა</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="seearch">
+   <form class="form-inline my-2 my-lg-0">
+      <input id="searchbox" placeholder="ძებნა" aria-label="Search">
+    </form>
+</div>
+<div class="scrollbar" id="style-1"></div>
+<div id="slidermain">
+      <div class="search1">
+      <div class="slider">
+    <figure>
+      <div class="slide">
+        <img src="images1/rim.jpg">
+      </div>
+
+      <div class="slide">
+        <img src="images1/mrrobot.jpg">
+      </div>
+
+      <div class="slide">
+        <img src="images1/wick.jpg">
+      </div>
+
+      <div class="slide">
+        <img src="images1/pool.jpg">
+      </div>
+
+      <div class="slide">
+        <img src="images1/trans5.jpg">
+      </div>
+    </figure>
+  </div>
+</div>
+</div>
+<hr id="line">
+<!-- ნავიგაციის ბოლო -->
+<!-- კონტენტის დასაწყისი -->
+<!-- <div id="cont" class="container"> -->
+<div class="allcontent">
+  <!-- პირველი რიგი -->
+  <h1>ფილმები</h1>
+<div class="content">
+<img src="images/blackpanter.jpg" alt="blackpanter">
+<abbr title="შავი პანტერა"><p class="text">შავი პანტერა</p></abbr>
+<div class="effect">
+</div>
+</div>
+<div class="content">
+<img src="images/home.jpg" alt="home">
+<abbr title="ადამიანი ობობა დაბრუნება"><p  class="text">ადამიანი ობობა დაბრუნება</p></abbr>
+</div>
+<div class="content">
+<img src="images/infinity.jpg" alt="infinity">
+<abbr title="შურისმაძიებლები უსასრულო ომი"><p  class="text">შურისმაძიებლები უსასრულო ომი</p></abbr>
+</div>
+<div class="content">
+<img src="images/jumanji.jpg" alt="jumanji">
+<abbr title="ჯუმანჯი"><p  class="text">ჯუმანჯი</p></abbr>
+</div>
+<div class="content">
+<img src="images/pool.jpg" alt="pool">
+<abbr title="დედპული 2"><p  class="text">დედპული 2</p></abbr>
+</div>
+<div class="content">
+<img src="images/rim.jpg" alt="rim">
+<abbr title="წყნარი ოკეანის ტიტანები 2 აღზევება"><p  class="text">წყნარი ოკეანის ტიტანები 2 აღზევება</p></abbr>
+<!-- პირველი რიგის დასასრული -->
+<!-- მეორე რიგი -->
+</div>
+<div class="content">
+<img src="images/ramp.jpg" alt="ramp">
+<p class="text">რამპეიჯი</p>
+</div>
+<div class="content">
+<img src="images/tomb.jpg" alt="tomb">
+<p  class="text">თომბ რაიდერი</p>
+</div>
+<div class="content">
+<img src="images/trans.jpg" alt="trans">
+<abbr title="ტრანსფორმერები 5 უკანასკნელი რაინდი"><p  class="text">ტრანსფორმერები 5 უკანასკნელი რაინდი</p></abbr>
+</div>
+<div class="content">
+<img src="images/pir.jpg" alt="pir">
+<abbr title="კარიბის ზღვის მეკობრეები-მკვდრები ზღაპრებს არ ჰყვებიან" ><p  class="text">კარიბის ზღვის მეკობრეები-მკვდრები ზღაპრებს არ ჰყვებიან</p></abbr>
+</div>
+<div class="content">
+<img src="images/axl.jpg" alt="axl">
+<p  class="text">აქსელი</p>
+</div>
+<div class="content">
+<img src="images/below.jpg" alt="below">
+<p  class="text">-22 გრადუსი ცელსიუსით</p>
+</div>
+<!-- მეორე რიგის დასასრული -->
+<!-- მესამე რიგი -->
+<div class="content">
+<img src="images/fast8.jpg" alt="fast8">
+<p class="text">ფორსაჟი 8</p>
+</div>
+<div class="content">
+<img src="images/baby.jpg" alt="baby">
+<p  class="text">პატარა მძღოლი</p>
+</div>
+<div class="content">
+<img src="images/guardians.jpg" alt="guardians">
+<p  class="text">გალაქტიკის მცველები</p>
+</div>
+<div class="content">
+<img src="images/jason.jpg" alt="jason">
+<p  class="text">ჯეისონ ბორნი</p>
+</div>
+<div class="content">
+<img src="images/max.jpg" alt="max">
+<p  class="text">მაქს პეინი</p>
+</div>
+<div class="content">
+<img src="images/john.jpg" alt="john">
+<p  class="text">ჯონ უიკი</p>
+</div>
+<!-- მესამე რიგის დასასრული -->
+<h1>მულტფილმები</h1>
+<!-- პირველი რიგი -->
+<div class="content">
+<img src="images/piter.jpg" alt="piter">
+<p class="text">პიტერი</p>
+</div>
+<div class="content">
+<img src="images/dragon.jpg" alt="dragon">
+<abbr title="როგორ მოვათვინიეროთ დრაკონი"><p  class="text">როგორ მოვათვინიეროთ დრაკონი</p></abbr>
+</div>
+<div class="content">
+<img src="images/shrek.jpg" alt="shrek">
+<p  class="text">შრეკი</p>
+</div>
+<div class="content">
+<img src="images/hotel.jpg" alt="hotel">
+<p  class="text">სასტუმრო ტრანსილვანია</p>
+</div>
+<div class="content">
+<img src="images/aladin.jpg" alt="aladin">
+<p  class="text">ალადინი</p>
+</div>
+<div class="content">
+<img src="images/balu.jpg" alt="balu">
+<p  class="text">მაუგლი</p>
+</div>
+<!-- პირველი რიგის დასასრული -->
+<!-- მეორე რიგი  -->
+<div class="content">
+<img src="images/ferd.jpg" alt="ferd">
+<p class="text">ფერდინანდი</p>
+</div>
+<div class="content">
+<img src="images/emoji.jpg" alt="emoji">
+<p  class="text">ემოჯი</p>
+</div>
+<div class="content">
+<img src="images/cars.jpg" alt="cars">
+<p  class="text">მანქანები 3</p>
+</div>
+<div class="content">
+<img src="images/ace.jpg" alt="ace">
+<p  class="text">გამყინვარების ერა</p>
+</div>
+<div class="content">
+<img src="images/sezoni.jpg" alt="sezoni">
+<p  class="text">ნადირობის სეზონი</p>
+</div>
+<div class="content">
+<img src="images/frozen.jpg" alt="frozen">
+<p  class="text">გაყინული</p>
+</div>
+<!-- მეორე რიგის დასასრული -->
+<!-- მესამე რიგი -->
+<div class="content">
+<img src="images/incredibles.jpg" alt="incredibles">
+<p class="text">შეუჩერებელნი</p>
+</div>
+<div class="content">
+<img src="images/pengvins.jpg" alt="pengvins">
+<p  class="text">მადაგასკარის პინგვინები</p>
+</div>
+<div class="content">
+<img src="images/doo.jpg" alt="doo">
+<p  class="text">სკუბი დუ</p>
+</div>
+<div class="content">
+<img src="images/me.jpg" alt="me">
+<p  class="text">საზიზღარი მე 3</p>
+</div>
+<div class="content">
+<img src="images/pants.jpg" alt="pants">
+<p  class="text">კაპიტანი ტრიკო</p>
+</div>
+<div class="content">
+<img src="images/smurfs.jpg" alt="smurfs">
+<p  class="text">სმურფები</p>
+</div>
+<!-- მესამე რიგის დასასრული -->
+<h1>სერიალები</h1>
+<!-- პირველი რიგი -->
+<div class="content">
+<img src="images/mrrobot.jpg" alt="mrrobot">
+<p class="text">მისტერ რობოტი</p>
+</div>
+<div class="content">
+<img src="images/gotham.jpg" alt="gotham">
+<p  class="text">გოთემი</p>
+</div>
+<div class="content">
+<img src="images/holmes.jpg" alt="holmes">
+<p  class="text">შერლოკ ჰოლმსი</p>
+</div>
+<div class="content">
+<img src="images/flashjpg.jpg" alt="flash">
+<p  class="text">ფლეში</p>
+</div>
+<div class="content">
+<img src="images/brigada.jpg" alt="brigada">
+<p  class="text">ბრიგადა</p>
+</div>
+<div class="content">
+<img src="images/super.jpg" alt="super">
+<p  class="text">სუპერ გოგო</p>
+</div>
+<!-- პირველი რიგის დასასრული -->
+<!-- მეორე რიგი  -->
+<div class="content">
+<img src="images/shield.jpg" alt="shield">
+<p class="text">შილდის აგენტები</p>
+</div>
+<div class="content">
+<img src="images/walk.jpg" alt="walk">
+<p  class="text">მოსიარულე მკვდრები</p>
+</div>
+<div class="content">
+<img src="images/arrow.jpg" alt="arrow">
+<p  class="text">ისარი</p>
+</div>
+<div class="content">
+<img src="images/lost.jpg" alt="lost">
+<p  class="text">კოსმოსში დაკარგულები</p>
+</div>
+<div class="content">
+<img src="images/spartac.jpg" alt="spartac">
+<p  class="text">სპარტაკი</p>
+</div>
+<div class="content">
+<img src="images/bro.jpg" alt="bro">
+<p  class="text">საძმო</p>
+</div>
+<!-- მეორე რიგის დასასრული -->
+<!-- მესამე რიგი -->
+<div class="content">
+<img src="images/last.jpg" alt="last">
+<p class="text">უკანასკნელი სამეფო</p>
+</div>
+<div class="content">
+<img src="images/banshee.jpeg" alt="banshee">
+<p  class="text">ბანში</p>
+</div>
+<div class="content">
+<img src="images/diaries.jpg" alt="diaries">
+<p  class="text">ვამპირის დღიურები</p>
+</div>
+<div class="content">
+<img src="images/walk2.jpg" alt="walk2">
+<abbr title="გეშინოდეთ მოსიარულე მკვდრების"><p  class="text">გეშინოდეთ მოსიარულე მკვდრების</p></abbr>
+</div>
+<div class="content">
+<img src="images/z.jpg" alt="z">
+<p  class="text">მოდგმა Z </p>
+</div>
+<div class="content">
+<img src="images/wolf.jpg" alt="wolf">
+<p  class="text">თინეიჯერი მგელი</p>
+</div>
+<!-- მესამე რიგის დასასრული -->
+</div>
+<!-- მთლიანი რიგის დასასრული -->
+<div class="pages">
+  <div class="pagescontent">
+    <div class="page">
+      <p class="pagesn">1</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">2</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">3</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">4</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">5</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">6</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">7</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">8</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">9</p>
+    </div>
+    <div class="page">
+      <p class="pagesn">10</p>
+    </div>
+  </div>
+</div>
+<footer id="foot">
+  <h3 id="brandfoot">Movies.ge</h3>
+  <div id="footerbar">
+      <p class="lies">მთავარი სამომხმარებლო შეთანხმება კონტაქტი რეკლამა +777777 © Movies.ge</p>
+  </div>
+  <div class="social">
+    <i id="fb" class="fab fa-facebook-square"></i>
+    <i id="pn" class="fab fa-pinterest"></i>
+    <i id="inst" class="fab fa-instagram"></i>
+    <i id="ps" class="fab fa-google-play"></i>
+    <i id="yt" class="fab fa-youtube"></i>
+  </div> 
+</footer>
+</div>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function(){
+
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+document.querySelector('#myBtn').addEventListener('click', function(){
+
+     window.scroll({ top: 0,
+                     behavior: "smooth"});
+});
+</script>
+<!-- HelloPreload http://hello-site.ru/preloader/ -->
+<!-- <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #000000 url(http://hello-site.ru//main/images/preloads/puff.svg) center center no-repeat;background-size:111px;}</style>
+<div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};</script> -->
+<!-- HelloPreload http://hello-site.ru/preloader/ -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>  
+</body>
+</html>

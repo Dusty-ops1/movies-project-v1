@@ -1,0 +1,27 @@
+@media (max-width: 500px) {
+	.pages{
+		width: 10%;
+	}
+	.page{
+		float: left;
+
+	}
+	footer{
+		margin-top: 200px;
+	}
+}
+@media (max-width: 800px) {
+	#slidermain{
+		display: none;
+	}
+}
+@media (max-width: 991px){
+	.dropdown-menu{
+		background-color: #5A5A5A;
+
+	}
+	.dropdown-menu a:hover{
+		margin-left: 20px;
+		transition-duration: 0.5s;
+	}
+}
